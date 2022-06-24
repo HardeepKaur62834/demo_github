@@ -28,7 +28,7 @@ jobs:
 
         
 
-    - run: terraform init --reconfigure-backend-config="address=demo.consul.io" 
+    - run: terraform init --backend-config="address=demo.consul.io" 
 
     - id: plan
       run: terraform plan -no-color
