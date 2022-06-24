@@ -28,7 +28,7 @@ jobs:
 
         
 
-    - run: terraform init --backend-config="address=demo.tfstate" 
+    - run: terraform init --reconfigure-backend-config="address=demo.tfstate" 
 
     - id: plan
       run: terraform plan -no-color
