@@ -5,6 +5,11 @@ on:
     branches :
     - master
 
+env:
+  BUCKET: hardeep-backend-bucket
+  TFSTATE_FILE: hk.tfstate
+  DB_TABLE: hardeep-demo-table
+
 jobs:
   terraform:
     name: 'Terraform'
@@ -28,7 +33,7 @@ jobs:
 
         
 
-    - run: terraform init --reconfigure-backend-config="address=demo.tfstate" 
+    - run: terraform init -reconfigure -backend-config="bucket=$BUCKET" -backend-config="key=$TFSTATE_FILE" -backend-config="dynamodb_table=$DB_TABLE"
 
     - id: plan
       run: terraform plan -no-color
