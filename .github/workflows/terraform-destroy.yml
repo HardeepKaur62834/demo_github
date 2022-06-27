@@ -1,7 +1,7 @@
 name: 'Terraform-destroy'
 
 on: 
-  workflow-dispatch:
+  workflow_dispatch:
 
 env:
   BUCKET: hardeep-backend-bucket
