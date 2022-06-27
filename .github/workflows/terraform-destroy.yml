@@ -12,7 +12,7 @@ env:
 
 jobs:
   terraform-destroy:
-    name: 'Terraform'
+    needs: terraform-apply
     runs-on: ubuntu-latest
 
     defaults:

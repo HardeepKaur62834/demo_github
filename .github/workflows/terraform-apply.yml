@@ -11,8 +11,7 @@ env:
   DB_TABLE: hardeep-demo-table
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  terraform-apply:
     runs-on: ubuntu-latest
 
     defaults:
