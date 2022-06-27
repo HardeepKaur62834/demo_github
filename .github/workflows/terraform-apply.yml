@@ -37,7 +37,7 @@ jobs:
        -backend-config="bucket=$BUCKET" 
        -backend-config="key=$TFSTATE_FILE" 
        -backend-config="dynamodb_table=$DB_TABLE"
-       -backend-config="encrypt=true"
+      #  -backend-config="encrypt=true"
 
     - name: tf-plan
       id: plan
