@@ -12,7 +12,7 @@ env:
 
 jobs:
   terraform-destroy:
-    needs: terraform-apply
+    # needs: terraform-apply
     runs-on: ubuntu-latest
 
     defaults:
@@ -38,6 +38,7 @@ jobs:
        -backend-config="bucket=$BUCKET" 
        -backend-config="key=$TFSTATE_FILE" 
        -backend-config="dynamodb_table=$DB_TABLE"
+       -
 
     - name: Show Destroy plan
       run: terraform plan -destroy
