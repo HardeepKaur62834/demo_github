@@ -47,3 +47,4 @@ jobs:
       id: apply
       run:
         terraform apply -auto-approve
+        
