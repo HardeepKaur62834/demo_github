@@ -5,10 +5,10 @@ on:
     branches :
     - master
 
-env:
-  BUCKET: hardeep-backend-bucket
-  TFSTATE_FILE: hk.tfstate
-  DB_TABLE: hardeep-demo-table
+# env:
+#   BUCKET: hardeep-backend-bucket
+#   TFSTATE_FILE: hk.tfstate
+#   DB_TABLE: hardeep-demo-table
 
 jobs:
   terraform:
