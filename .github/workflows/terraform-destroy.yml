@@ -1,9 +1,7 @@
 name: 'Terraform-destroy'
 
 on: 
-  push: 
-    branches :
-    - master
+  workflow-dispatch
 
 env:
   BUCKET: hardeep-backend-bucket
